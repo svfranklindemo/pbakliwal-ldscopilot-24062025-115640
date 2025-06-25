@@ -36,7 +36,7 @@ if (shouldLoadCopilot) {
                 const script = document.createElement('script');
                 script.id = 'copilot-editor-script';
                 script.type = 'module';
-                script.src = `https://${domain}/editor/editor.js?ims=explicit`;
+                script.src = `https://${domain}/editor/editor.js`;
                 
                 // Handle loading errors
                 script.onerror = () => console.error('Failed to load copilot script');
