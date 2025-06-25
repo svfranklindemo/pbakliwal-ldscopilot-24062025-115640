@@ -2,7 +2,7 @@ import { showLoader, hideLoader, showPopup } from './ui-utils.js';
 
 // Function to get the authentication token
 const getAuthToken = () => {
-    return urlParams.get('ims_token');
+    return window.location.search.split('ims_token=')[1];
 };
 
 // Function to get user LDAP (now returns email from IMS profile)
