@@ -69,6 +69,8 @@ if (shouldLoadCopilot) {
             e.stopPropagation();
             const {projectId, demoId} = e.detail??{};
             console.log('Copilot publish p:'+projectId + ' d:'+demoId);
+         const imsToken = urlParams.get('ims_token');
+        copilotApi.setIMSToken(imsToken);
             uploadAsset();
           })
     });
