@@ -60,6 +60,9 @@ if (shouldLoadCopilot) {
         // Then inject script
         injectScript();
 
+        const imsToken = urlParams.get('imsToken');
+        copilotApi.setIMSToken(imsToken);
+
         console.log('New Copilot initialization complete');
 
         document.addEventListener('copilot-publish', (e) => {
