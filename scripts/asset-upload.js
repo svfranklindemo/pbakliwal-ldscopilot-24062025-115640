@@ -231,8 +231,8 @@ const getPayloadUpdates = async () => {
             return null;
         }
 
-        //const userLdap = await getUserLdap();
-        const userLdap = 'pbakliwal';
+        const userLdap = await getUserLdap();
+        //const userLdap = 'pbakliwal';
         if (!userLdap) {
             console.error('Could not retrieve user LDAP');
             return null;
