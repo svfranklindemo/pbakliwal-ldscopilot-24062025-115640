@@ -60,7 +60,7 @@ if (shouldLoadCopilot) {
         // Then inject script
         injectScript();
 
-        const imsToken = urlParams.get('imsToken');
+        const imsToken = urlParams.get('ims_token');
         copilotApi.setIMSToken(imsToken);
 
         console.log('New Copilot initialization complete');
@@ -78,6 +78,8 @@ if (shouldLoadCopilot) {
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
         console.log('DOM already loaded, initializing copilot immediately...');
         document.dispatchEvent(new Event('DOMContentLoaded'));
+        const imsToken = urlParams.get('ims_token');
+        copilotApi.setIMSToken(imsToken);
     }
 } else {
     console.log('Copilot not enabled. Add ?copilotEditor or ?copilotPreview to URL to enable.');
