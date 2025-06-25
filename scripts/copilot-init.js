@@ -60,12 +60,6 @@ if (shouldLoadCopilot) {
         // Then inject script
         injectScript();
 
-        // Wait 5 seconds before setting IMS token
-        setTimeout(() => {
-            const imsToken = urlParams.get('ims_token');
-            copilotApi.setIMSToken(imsToken);
-        }, 5000);
-
         console.log('New Copilot initialization complete');
 
         document.addEventListener('copilot-publish', (e) => {
