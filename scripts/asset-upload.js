@@ -22,7 +22,8 @@ const getAuthToken = () => {
 // Function to get user LDAP (now returns email from IMS profile)
 const getUserLdap = async () => {
     try {
-        const token = getAuthToken();
+        //const token = getAuthToken();
+        const token = copilotApi.getIMSToken();
         if (!token) {
             throw new Error('Authentication token not found');
         }
